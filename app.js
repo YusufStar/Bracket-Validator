@@ -1,7 +1,13 @@
 const input = document.querySelector("#input-box")
 const resultElem = document.querySelector("#result")
+const btn = document.querySelector("#button")
 console.log(input);
 console.log(resultElem);
+
+btn.addEventListener("click", () => {
+    resultElem.innerHTML = areBracketsBalanced(input.value);
+    resultElem.style.backgroundColor = areBracketsBalanced(input.value) ? "green" : "red";
+})
 
 input.addEventListener("keydown", (e) => {
     if(e.keyCode == 13) {
